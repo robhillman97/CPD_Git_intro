@@ -1,10 +1,10 @@
 # Git and Git-Hub
-At some point in your research you will likely have a massive hard drive crash, or realize you introduced a bug in your code and want to revert it back to its working state (perhaps from several weeks before).  Or you may end up working on a bit of code with other people.  In any of these cases version control saves the day.  This document with give you an introduction to `Git` and [`Git-Hub`](https://github.com/) as a version control solution.
+At some point you will likely have a massive hard drive crash, or realize you introduced a bug in your code and want to revert it back to its working state (perhaps from several weeks before).  Or you may end up working on a bit of code with other people.  In any of these cases version control saves the day.  This document with give you an introduction to `Git` and [`Git-Hub`](https://github.com/) as a version control solution.
 
 ## Before you start
 + Install `git`: https://git-scm.com/downloads
 + Create a `Git-Hub` account: https://github.com/
-+ Set up ssh key with `Git-Hub` account: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent (optional)
++ Set up ssh key with `Git-Hub` account: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 + Set up Two-Factor Authentication for `Git-Hub`: https://help.github.com/articles/about-two-factor-authentication/ (optional)
 
 ## Useful documentation
@@ -176,3 +176,13 @@ git merge <branch name>
 If there are any conflicts during the merge resolve them as stated above.
 
 **Note** In this example we are merging the branch into `main`, but `main` is just a branch like any other (there is nothing special about `main`).  You can merger any two branches.
+
+# Forks
+
+What if you want to take and existing repository on GitHub and make a copy of it under your own account?  This is exactly what the `Fork` button does in the top left of the user interface.
+
+![Git-Hub fork button](git-hub_fork_repo.png)
+
+Once you have forked a repository you will have full permissions to change any of the files.  Many open source projects will advise contributors to first fork the repository, commit any changes to a new branch on the forked version, and open a `Pull Request` from your fork back to the main repository when your changes are ready.  This reduces the need for these project to manage the account permissions for people outside their organization.
+
+If multiple people are working on the common repository and they all belong to the same organization it is typically easier to add all the developers as collaborators on the same repository than to have each developer have their own fork.
