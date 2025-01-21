@@ -1,13 +1,10 @@
 # Group Activity
 
-While git is great for helping you keep a backup of your code online, this is only a fraction of what it offers.  Where git starts to shine is when you start working in a team on the same code.  To highlight this, we will be working as a team for the next activity.
+While git is great for helping you keep a backup of your code online, this is only a fraction of what it offers.  Where git starts to shine is when you start working in a team on the same code.  To highlight this, these notes go over a Git workflow that is easy to use in a team.
 
 ## The Goal
 
-I want everyone to add a short "hello world" program into the `code` folder of this repository (preferably in Python, but the language does not matter too much).  During this exercise I want everyone to also practice *reviewing* another classmate's submitted code.
-
-### Note
-I will need everyone to come up and have their GitHub account added to the shared repository.  Once added, everyone can clone the repository to their local computer.
+I want everyone to add a short "hello world" program into the `code` folder of a **fork** of this repository (preferably in Python, but the language does not matter too much).
 
 ## Good coding practices
 Whether you are working alone or working in a team, one of the most valuable things you should keep in mind is **context transfer**.  It is not enough to just track the changes made to the code, but to also track **why** those changes were made.  Many of the best practices covered within this lecture will be various flavors of recoding this kind of context in a way that is clear to other developers, or even to yourself when you look back at old code.
@@ -39,7 +36,7 @@ or if you want to clean up your git history rebase in interactive mode (`git reb
     - Often this can be done with a button on GitHub
 8. push the rebased code back to the remote
 9. merge to the `main` branch using the big green button
-10. delete the branch on the remote once the merge is finish
+10. delete the branch on the remote once the merge is finished
 11. pull the latest `main` (with your PR merged) locally
 12. (optional) delete your local copy of the merged branch
 
@@ -86,7 +83,7 @@ What does this workflow achieve?
 - Any merged branch can be safely deleted, there is no need to clutter up the remote with old branches (also you are less likely to have multiple developers pick the same branch name for their work if there are fewer branches on the remote repo).
 
 ### **Note**
-With this workflow, every developer is working on **different** branches.  If multiple people are working on a single feature they should create a branch for the feature, and **each** branch off of that new feature branch.  They can both make PRs into/rebase onto the feature branch.  Once the feature is done a new PR that brings it into the `main` branch should be made.  As everyone is on a independent branch merge conflicts only happen at the rebase stages, rather than on pulls or pushes.
+With this workflow, every developer is working on **different** branches.  If multiple people are working on a single feature they should create a branch for the feature, and **each** branch off of that new feature branch.  They can both make PRs into/rebase onto the feature branch.  Once the feature is done a new PR that brings it into the `main` branch should be made.  As everyone is on an independent branch merge conflicts only happen at the rebase stages, rather than on pulls or pushes.
 
 
 ## Writing better commit messages
@@ -143,7 +140,7 @@ Once you have a branch with some commits you want to merge into the main branch,
 
 ## Writing better code reviews
 
-When working in a team it is important to review other people's code along side writing your own code.  While it might be tempting to just quickly look code changes on GitHub and leave a short message like "looks good to me" that is only useful for very small changes to the code.  For larger changes a full review should be done.
+When working in a team it is important to review other people's code alongside writing your own code.  While it might be tempting to just quickly look code changes on GitHub and leave a short message like "looks good to me" that is only useful for very small changes to the code.  For larger changes a full review should be done.
 
 1. Pull down the changes locally
 ```bash
