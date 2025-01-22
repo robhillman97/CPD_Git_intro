@@ -7,6 +7,13 @@ At some point you will likely have a massive hard drive crash, or realize you in
 + Set up ssh key with `Git-Hub` account: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 + Set up Two-Factor Authentication for `Git-Hub`: https://help.github.com/articles/about-two-factor-authentication/ (optional)
 
+### SSH key
+1. Open a terminal
+2. Use the command `ssh-keygen -t ed25519 -C "your_email@example.com"` to create a new key
+    - Feel free to add a passphrase, you will need to remember this if you do.  See the link above about SSH keys to see how to add this passphrase to the key manager of your OS if you don't want to type it every time.
+3. Use the command  `cat ~/.ssh/id_ed25519.pub` and copy the output
+4. Add a new SSH key to your GitHub account (see https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
 ## Useful documentation
 + The Git Book: https://git-scm.com/book/en/v2
 
